@@ -61,14 +61,8 @@ def clean_data():
     df_mod['monto_del_credito'] = df_mod['monto_del_credito'].apply(lambda x: x.replace(' ','') )
     df_mod['monto_del_credito'] = df_mod['monto_del_credito'].astype(float)
 
-    #Eliminación de valores 
-    #df_mod = df_mod[df_mod['comuna_ciudadano'] != 'sin comuna'] 
-    #df_mod = df_mod[df_mod['idea_negocio'] != 'sin barrio']
-    #df_mod = df_mod[df_mod['tipo_de_emprendimiento'] != 'sin tipo']
-    #df_mod = df_mod[df_mod['barrio'] != 'sin barrio']
     
 
     df_mod.drop_duplicates(inplace = True)
 
     return df_mod
-
